@@ -17,10 +17,10 @@ h1 {
   font-size: 24px;
 }
 
-h6.t24{
+.t24{
   font-size: 24px;
-  -webkit-margin-before: .4165em;
-  -webkit-margin-after: .4165em;
+  margin-top: .4165em;
+  margin-bottom: .4165em;
 }
 
 #cervera{
