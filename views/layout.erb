@@ -1,0 +1,51 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"><![endif]-->
+<!--[if (gt IE 6)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
+<head>
+	<!-- simplified character encoding -->
+	<meta charset="utf-8">
+
+	<title>Miguel Cervera</title>
+	<meta name="description" content="Pagina personal de Miguel Cervera">
+	<meta name="author" content="Miguel Cervera">
+	<!-- favicon 16x16 -->
+	<link rel="shortcut icon" href="/cervera.ico">
+	<link rel="stylesheet" href="stylesheets/cervera.css?v=1.0">
+	<%= javascript_include_tag 'jquery-1.7.1.min.js' %>
+	<%= javascript_include_tag 'modernizr.custom.87200.js' %>
+	<%= javascript_include_tag 'jquery.masonry.min.js' %>
+</head>
+<body>
+  <div id='cervera'>
+    <div id='content' style="display:none;">
+      <%= yield%>
+    </div>
+    <div id='menu'>
+      <div class="item size2">
+        <%= img 'miguel.jpg' %>
+      </div>
+      <div class="item size5 bio">
+        <h1>Miguel Angel Patricio Cervera Castaldi</h1>
+        <p>
+          Web Developer, Ruby on Rails lover, agile developer; I have a huge passion for technology and I still have time to party!
+        </p>
+        <br />
+      </div>	
+    </div>
+    <script>
+      $(document).ready({
+        $('#menu').masonry({
+          itemSelector: '.item',
+          columnWidth: 120,
+          isAnimated: !Modernizr.csstransitions
+        });
+      });
+    </script>
+	  <div id="footer">
+		  <div class='wrapper'>
+			  &copy; Cervera 2011
+		  </div>
+	  </div>
+	</div>
+</body>
+</html>

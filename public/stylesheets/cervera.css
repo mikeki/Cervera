@@ -1,0 +1,132 @@
+html {
+	width: 100%;
+	height: 100%;
+	font-family: Georgia, Arial,sans-serif;
+	font-size: 12px;
+}
+
+body {
+	background:#000000 url(/images/black-stripe.gif) repeat;
+	min-width: 1000px;
+	margin: 0;
+	padding: 0;
+	color: #2e2e2e;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+#cervera{
+  padding: 10px 10px 0px 10px;
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
+#menu{
+  width: 840px;
+  margin: 0 auto;
+	height:100%;
+	min-height: 100%;
+	text-align:center;
+	padding-bottom:10px;
+}
+
+.item{
+  background: #fff;
+  float: left;
+  padding: 7px 5px 3.5px 5px;
+  margin: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.twitterbutton{
+  width: 186px;
+}
+
+.facebookbutton{
+  width: 186px;
+}
+
+.linkedin{
+  width: 370px;
+}
+
+.size1{
+  width: 100px;
+}
+
+.size2{
+  width: 220px;
+}
+
+.size3{
+  width: 340px;
+}
+
+.size4{
+  width: 460px;
+}
+
+.size5{
+  width: 580px;
+}
+
+.size6{
+  width: 700px;
+}
+
+.size7{
+  width: 820px;
+}
+
+.bio p{
+  width: 400px;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.contact {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.mail{
+  font-size: 14px;
+}
+
+.mail a:link, .mail a:visited{
+  color: #006cff;
+}
+
+.mail a:hover{
+  color: #494949;
+}
+
+#content{
+	width:840px;
+}
+
+.wrapper{
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#footer{
+	height:30px;
+	width: 840px;
+	color:#e84b20;
+	padding-top:15px;
+	text-align:right;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+.clear{
+	clear:both;
+}
