@@ -12,22 +12,15 @@ get '/:page_name' do
 end
 
 helpers do
-  def link_to name, url_fragment, mode=:path_only
+  def link_to name, url_fragment, mode=:same_window
     case mode
-    when :path_only
-      base = request.script_name
-    when :full_url
-      if (request.scheme == 'http' && request.port == 80 ||
-          request.scheme == 'https' && request.port == 443)
-        port = ""
-      else
-        port = ":#{request.port}"
-      end
-      base = "#{request.scheme}://#{request.host}#{port}#{request.script_name}"
+    when :same_window
+      "<a href='#{url_fragment}'>#{name}</a>"
+    when :new_window
+      "<a href='#{url_fragment}' target='_blank'>#{name}</a>"
     else
       raise "Unknown script_url mode #{mode}"
     end
-    "<a href='#{base}#{url_fragment}'>#{name}</a>"
   end
   
   def javascript_include_tag(src)
