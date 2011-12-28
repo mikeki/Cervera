@@ -11,15 +11,17 @@
 	<!-- favicon 16x16 -->
 	<link rel="shortcut icon" href="/cervera.ico">
 	<link rel="stylesheet" href="stylesheets/cervera.css?v=1.0">
+	<link rel="stylesheet" href="stylesheets/colorbox.css">
 	<script src="/javascripts/jquery-1.7.1.min.js"></script>
 	<script src="/javascripts/modernizr.custom.87200.js"></script>
   <script src="/javascripts/jquery.masonry.min.js"></script>
   <script src="/javascripts/cufon-yui.js"></script>
   <script src="/javascripts/OptimusPrinceps_500-OptimusPrinceps_600.font.js"></script>
+  <script src="/javascripts/jquery.colorbox-min.js"></script>
   <script type="text/javascript">
 		Cufon.replace('h6'); 
 		Cufon.replace('.t14', {hover: true});
-		Cufon.replace('.t26');
+		Cufon.replace('.t26', {hover: true});
 	</script>
 </head>
 <body>
@@ -46,9 +48,11 @@
         </p>
         <br />
       </div>
-      <div class="item size2-5">
-        <span class="t26">Career & Education</span>
-      </div>
+      <a href="/profile" class="ajax">
+        <div class="item size2-5">
+          <span class="t26">Career & Education</span>
+        </div>
+      </a>
       <div class="item size2-5">
         <span class="t26">Work Experience</span>
       </div>
@@ -84,6 +88,7 @@
           columnWidth: 120,
           isAnimated: !Modernizr.csstransitions
         });
+        //$(".ajax").colorbox();
       });
     </script>
 	  <!--><div id="footer">

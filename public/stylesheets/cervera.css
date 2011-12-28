@@ -17,6 +17,11 @@ h1 {
   font-size: 24px;
 }
 
+a{
+  outline: 0;
+  border: 0;
+}
+
 .t24{
   font-size: 24px;
   margin-top: 11px;
@@ -110,6 +115,7 @@ h1 {
 
 .t26{
   font-size: 26px;
+  margin: 0 auto;
 }
 
 .contact {
@@ -127,6 +133,28 @@ a:link, a:visited{
 
 a:hover{
   color: #494949;
+}
+
+div.boton{
+  background-color: #5c5c5c;
+}
+
+a.ajax{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+a:link.ajax, a:visited.ajax{
+  background-color: #5c5c5c;
+  color: #fff;
+  font-size: 26px;
+}
+
+a:hover.ajax{
+  background-color: #fff;
+  color: #5c5c5c;
+  font-size: 26px;
 }
 
 #content{

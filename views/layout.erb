@@ -10,23 +10,34 @@
 	<meta name="author" content="Miguel Cervera">
 	<!-- favicon 16x16 -->
 	<link rel="shortcut icon" href="/cervera.ico">
-	<link rel="stylesheet" href="stylesheets/cervera.css?v=1.0">
+	<link rel="stylesheet" href="stylesheets/cervera.css">
+	<link rel="stylesheet" href="stylesheets/colorbox.css">
 	<%= javascript_include_tag 'jquery-1.7.1.min.js' %>
 	<%= javascript_include_tag 'modernizr.custom.87200.js' %>
+	<%= javascript_include_tag 'jquery.colorbox-min.js' %>
 	<%= javascript_include_tag 'jquery.masonry.min.js' %>
 	<%= javascript_include_tag 'cufon-yui.js' %>
 	<%= javascript_include_tag 'OptimusPrinceps_500-OptimusPrinceps_600.font.js' %>
 	<script type="text/javascript">
 		Cufon.replace('.t24'); 
 		Cufon.replace('.t14', {hover: true});
-		Cufon.replace('.t26');
+		Cufon.replace('.t26', {hover: true});
+		Cufon.replace('.ajax', {hover: true});
+    $(document).ready(function (){
+      $('.ajax').colorbox();
+      $('.ajax').hover(
+      function (){
+        $(this).parent().css('background-color', '#fff');
+      },
+      function (){
+        $(this).parent().css('background-color', '#5c5c5c');
+      }
+      );
+    });
 	</script>
 </head>
 <body>
   <div id='cervera'>
-    <div id='content' style="display:none;">
-      <%= yield%>
-    </div>
     <div id='menu'>
       <div class="item size2">
         <%= img 'miguel.jpg' %>
@@ -41,51 +52,52 @@
       <div class="item size5 bio">
         <p class="t14">
           Currently:
-          <br />working as Ruby Developer Intern at <%= link_to 'innku', "http://www.innku.com", :new_window %>
-          <br />Content Director at <%= link_to 'siscti 37', "http://www.siscti.mx", :new_window %>
-          <br />Treasurer at <%= link_to 'csa 12', "http://www.facebook.com/ConsejoSA", :new_window %>
+          <br />working as Ruby Developer Intern at <%= link_to 'innku', "http://www.innku.com", :mode => :new_window %>
+          <br />Content Director at <%= link_to 'siscti 37', "http://www.siscti.mx", :mode => :new_window %>
+          <br />Treasurer at <%= link_to 'csa 12', "http://www.facebook.com/ConsejoSA", :mode => :new_window %>
         </p>
         <br />
       </div>
-      <div class="item size2-5">
-        <span class="t26">Career & Education</span>
+      <div class="item size2-5 boton">
+        <%= link_to "Career & Education", '/education', :class => 'ajax'%>
       </div>
-      <div class="item size2-5">
-        <span class="t26">Work Experience</span>
+      <div class="item size2-5 boton">
+        <%= link_to "Work Experience", '/education', :class => 'ajax'%>
       </div>
-      <div class="item size2-5">
-        <span class="t26">Technical Skill</span>
+      <div class="item size2-5 boton">
+        <%= link_to "Technical Skill", '/education', :class => 'ajax'%>
       </div>
-      <div class="item size2-5">
-        <span class="t26">Personal Projects</span>
+      <div class="item size2-5 boton">
+        <%= link_to "Personal Projects", '/education', :class => 'ajax'%>
       </div>
-      <div class="item size2-5">
-        <span class="t26">School Projects</span>
+      <div class="item size2-5 boton">
+        <%= link_to "School Projects", '/education', :class => 'ajax'%>
       </div>
-      <div class="item size2-5">
-        <span class="t26">Leadership</span>
+      <div class="item size2-5 boton">
+        <%= link_to "Leadership", '/education', :class => 'ajax'%>
       </div>
-      <div class="item size2-5">
-        <span class="t26">Awards</span>
+      <div class="item size2-5 boton">
+        <%= link_to "Awards", '/education', :class => 'ajax'%>
       </div>
-      <div class="item size2-5">
-        <span class="t26">Events Involvement</span>
+      <div class="item size2-5 boton">
+        <%= link_to "Events Involvement", '/education', :class => 'ajax'%>
       </div>
       <div class="item size2">
-        <span class="t26">Download Resume</span>
+        <span class="t26"><%= link_to 'Download Resume', '/Miguel_Cervera_Resume.pdf', :mode => :new_window %></span>
       </div>
       <div class="item size5">
         <span class="t26">Contact: <%= link_to 'miguel@cervera.me', 'mailto:miguel@cervera.me' %></span>
       </div>
     </div>
     <script>
-      $(document).ready({
+      $(document).ready( {
         $('#menu').masonry({
           itemSelector: '.item',
           columnWidth: 120,
           isAnimated: !Modernizr.csstransitions
-        });
+        })
       });
+
     </script>
 	  <!--<div id="footer">
 		  <div class="item size7">

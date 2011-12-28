@@ -8,19 +8,16 @@ get '/' do
 end
 
 get '/:page_name' do
-  erb params[:page_name].to_s, :layout => !request.xhr?
+  puts "erb #{params[:page_name].to_sym}"
+  erb params[:page_name].to_sym, :layout => !request.xhr?
 end
 
 helpers do
-  def link_to name, url_fragment, mode=:same_window
-    case mode
-    when :same_window
-      "<a href='#{url_fragment}'>#{name}</a>"
-    when :new_window
-      "<a href='#{url_fragment}' target='_blank'>#{name}</a>"
-    else
-      raise "Unknown script_url mode #{mode}"
-    end
+  def link_to name, url_fragment, options = {}
+    link = "<a href='#{url_fragment}' "
+    link += "target='_blank' " if options[:mode] == :new_window
+    link += "class='#{options[:class]}'" if options[:class]
+    link += ">#{name}</a>"
   end
   
   def javascript_include_tag(src)
