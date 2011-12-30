@@ -8,8 +8,7 @@ get '/' do
 end
 
 get '/:page_name' do
-  puts "erb #{params[:page_name].to_sym}"
-  erb params[:page_name].to_sym, :layout => !request.xhr?
+  erb params[:page_name].to_sym, :layout => :content
 end
 
 helpers do

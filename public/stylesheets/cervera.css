@@ -35,6 +35,20 @@ a{
   position: relative;
 }
 
+#cervera-ajax{
+  padding: 20px;
+  font-size: 16px;
+}
+
+#cervera-ajax h1{
+  margin: 0;
+}
+
+#cervera-ajax h2{
+  font-size: 20px;
+  margin: 0;
+}
+
 #menu{
   width: 840px;
   margin: 0 auto;
@@ -54,6 +68,24 @@ a{
   border-radius: 5px;*/
 }
 
+.leftcol{
+  width:240px;
+  float: left;
+}
+
+.rightcol{
+  width: 600px;
+  float:left;
+}
+
+.botonscol{
+  width: 50%;
+  float: left;
+}
+
+#botones-menu{
+  width: 600px;
+}
 .secondary-item{
   background: #969696 !important;
 }
@@ -178,3 +210,21 @@ a:hover.ajax{
 .clear{
 	clear:both;
 }
+
+/* ******************************************************************** */ 
+/* Clearfix: http://csscreator.com/attributes/containedfloat.php        */
+/* ******************************************************************** */
+.clearfix:after {
+  content: "."; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden;
+  }
+ 
+.clearfix{display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix{height: 1%;}
+.clearfix{display: block;}
+/* End hide from IE-mac */
