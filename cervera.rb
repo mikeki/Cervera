@@ -8,7 +8,11 @@ get '/' do
 end
 
 get '/:page_name' do
-  erb params[:page_name].to_sym, :layout => :content
+  begin
+    erb params[:page_name].to_sym, :layout => :content
+  rescue
+    erb :notFound
+  end
 end
 
 helpers do
