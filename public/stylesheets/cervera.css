@@ -150,6 +150,11 @@ a{
   margin: 0 auto;
 }
 
+.t22{
+  font-size: 22px;
+  margin: 0 auto;
+}
+
 .contact {
   font-size: 15px;
   font-weight: bold;
@@ -157,6 +162,10 @@ a{
 
 .mail{
   font-size: 14px;
+}
+
+.twitter_item{
+  height: 85px;
 }
 
 a:link, a:visited{

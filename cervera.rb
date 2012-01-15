@@ -1,10 +1,14 @@
 require 'sinatra'
+require 'twitter'
+require 'dalli'
 
 set :static, true
 set :public_folder, File.dirname(__FILE__) + '/public'
+set :cache, Dalli::Client.new
 
 get '/' do
-  erb :index, :layout => !request.xhr?
+  @twitter = get_twitter_feed
+  erb :index, :layout => false
 end
 
 get '/:page_name' do
@@ -29,5 +33,14 @@ helpers do
   
   def img(name)
     "<img src='images/#{name}' alt='#{name}' />"
+  end
+  
+  def get_twitter_feed
+    begin
+      twitter = Twitter.user_timeline("MiguelCervera")[0..5]
+    rescue
+      twitter = []
+    end
+    twitter.insert 0, "Follow me at @MiguelCervera"
   end
 end
