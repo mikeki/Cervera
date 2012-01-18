@@ -27,7 +27,7 @@
     Cufon.replace('.ajax', {hover: true});
     $(document).ready(function (){
       twttr.anywhere(function (T) {
-        T.hovercards();
+        T.linkify();
       });
       $('.ajax').colorbox();
       $('.ajax').hover(
@@ -59,14 +59,14 @@
           <div class="item size5 bio">
             <div class="t24">Miguel Angel Patricio Cervera Castaldi</div>
             <p class="t14">
-              Web Developer, Agile developer, Ruby on Rails lover; I have a huge passion for technology and I still have time to party!
+              Web Developer, Agile developer, Ruby on Rails lover, Easy learner; I have a huge passion for technology and I still have time to party!
             </p>
             <br />
           </div>
           <div class="item size5 bio">
             <p class="t14">
               Currently:
-              <br />Working as Ruby Developer Intern at <%= link_to 'INNKU', "http://www.innku.com", :mode => :new_window %>
+              <br />Ruby Developer Intern at <%= link_to 'INNKU', "http://www.innku.com", :mode => :new_window %>
               <br />Content Director at <%= link_to 'SISCTI 37', "http://www.siscti.mx", :mode => :new_window %>
               <br />Treasurer at <%= link_to 'CSA 12', "http://www.facebook.com/ConsejoSA", :mode => :new_window %>
             </p>
